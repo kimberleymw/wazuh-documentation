@@ -23,6 +23,11 @@ TrustBuilder Configuration
 
    #. Navigate to **Access Management** > **Service Providers** > **+ Add a new SP**.
 
+      .. thumbnail:: /images/single-sign-on/trustbuilder/01-add-a-service-provider.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
+
    #. Complete the following fields:
 
       - Dipslay name: Enter a name  ``wazuh``
@@ -47,9 +52,9 @@ TrustBuilder Configuration
 
 #. Create two attributes:
 
-   a. Navigate to **Identity Management** > **Attributes** > **Attributes Definition**.
+   #. Navigate to **Identity Management** > **Attributes** > **Attributes Definition**.
 
-   b. Click on **+ Add new user Attributes**. Complete the first attribute parameters: 
+   #. Click on **+ Add new user Attributes**. Complete the first attribute parameters: 
 
       - Category: ``wazuh``
       - Name: ``group``
@@ -57,16 +62,26 @@ TrustBuilder Configuration
       - Data format: ``TEXT``
       - Properties: ``Single Value``,``Read Only``, ``Hidden``
 
+      .. thumbnail:: /images/single-sign-on/trustbuilder/02-add-a-wazuh-group-attribute.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
+
       Click on **Save & Close**.
 
-   c. Click on **+ Add new user Attributes**. Complete the second attribute parameters:
+   #. Click on **+ Add new user Attributes**. Complete the second attribute parameters:
 
       - Category: ``wazuh``
       - Name: ``role``
       - Dipslay name: ``wazuh role``
       - Data format: ``TEXT``
       - Properties: ``Single Value``,``Read Only``, ``Hidden``
- 
+
+      .. thumbnail:: /images/single-sign-on/trustbuilder/03-add-a-wazuh-role-attribute.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
+
       Click on **Save & Close**.
 
 #. Add Wazuh attributes to user profile definition: 
@@ -75,15 +90,25 @@ TrustBuilder Configuration
  
    #. Select ``wazuh role`` and ``wazuh group``.
 
+      .. thumbnail:: /images/single-sign-on/trustbuilder/04-add-a-wazuh-attributes-to-user-profile-definition.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
+
    #. Click on **Save**.
 
-#. Add Wazuh attibrutes to the SP:
+#. Add Wazuh attributes to the SP:
 
    #. Navigate to **Access management** > **Service Providers**. 
    
    #. Search for the Wazuh service provider created in the previous step.
 
    #. Click on **Identity**.
+
+      .. thumbnail:: /images/single-sign-on/trustbuilder/05-go-to-wazuh-service-provider-and-click-on-identity.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
 
    #. Click twice on **+ Add New SP User Attribute**. 
 
@@ -96,5 +121,10 @@ TrustBuilder Configuration
       - Service Provider user attribute: ``roles_key``
       - User attribute: ``wazuh role``
       - Required: ``Yes``
+
+      .. thumbnail:: /images/single-sign-on/trustbuilder/06-add-wazuh-service-provider-attributes.png
+          :title: Add a Service Provider
+          :align: center
+          :width: 80%
 
    #. Click on **Save & Close**.
